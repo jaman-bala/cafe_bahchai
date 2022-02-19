@@ -9,9 +9,15 @@ from django.views.generic.edit import FormMixin
 from .models import Category, Product
 
 
-class IndexView(TemplateView):
+class IndexView(ListView):
+    model = Product
     template_name = "index.html"
     context_object_name = "products"
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
 
 
 class AboutView(TemplateView):
@@ -20,6 +26,10 @@ class AboutView(TemplateView):
 
 class CareersView(TemplateView):
     template_name = "careers.html"
+
+
+class CartView(TemplateView):
+    template_name = "cart.html"
 
 
 class Error404View(TemplateView):

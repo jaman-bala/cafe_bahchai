@@ -3,7 +3,8 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Order, OrderItem
-from django.db.models.query import  QuerySet
+from django.db.models.query import QuerySet
+
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
@@ -18,6 +19,7 @@ class OrderAdmin(admin.ModelAdmin):
         'last_name',
         'email',
         'address',
+        'status',
         'is_paid',
         'get_status_display',
         'created',
@@ -28,7 +30,6 @@ class OrderAdmin(admin.ModelAdmin):
     list_editable = ['is_paid']
     inlines = [OrderItemInline]
     actions = ['make_status_paid']
-
 
     @admin.action(description="Обновить статус оплаты")
     def make_status_paid(self, request, queryset: QuerySet):

@@ -64,7 +64,7 @@
                                    role="button">Контакты <span class="caret"></span></a>
                             </li>
                             <li class="dropdown">
-                                {% for category in categories %}
+
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">О нас <span
                                         class="caret"></span></a>
                                 <ul class="dropdown-menu multi-level">
@@ -74,7 +74,7 @@
                                     <li><a href="{% url 'map' %}">Как нас найти?</a></li>
                                     <li><a href="faq.html">Вопросы и ответы</a></li>
                                 </ul>
-                                {% endfor %}
+
                             </li>
                         </ul>
                         <div class="nav navbar-nav navbar-right">
@@ -96,7 +96,7 @@
                                         Итого: <span>299.00 Сом</span>
                                     </p>
                                     <p class="cart-buttons">
-                                        <a href="cart.html" class="btn btn-xs cart-view">Просмотреть корзину</a>
+                                        <a href="{% url 'cart_page' %}" class="btn btn-xs cart-view">Просмотреть корзину</a>
                                         <a href="#" class="btn btn-xs cart-checkout">Позвонить</a>
                                     </p>
                                 </div>
@@ -125,74 +125,146 @@
             </p>
             <hr class="space"/>
 
-            <div class="flexslider carousel outer-navs visible-dir-nav white"
-
-                 data-options="minWidth:200,itemMargin:30,numItems:3,controlNav:false,directionNav:true">
-                {% for product in products_grid %}
-                <ul class="slides">
-                    <li>
-
-                        <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left"
-
-                             data-trigger="hover">
-
-                            <i class="fa fa-camera-retro anima"></i>
-
-                            <a href="#" class="img-box lightbox anima-scale-up anima">
-                                <img src="{{product.image.url}}" alt=""/>
-                            </a>
-
-                            <div class="caption">
-                                <h2></h2>
-                                <span class="extra-content"> сом</span>
-                                <p></p>
+            <div class="flexslider carousel outer-navs visible-dir-nav white" data-options="minWidth:200,itemMargin:30,numItems:3,controlNav:false,directionNav:true">
+                    <ul class="slides">
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-9.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл</p>
+                                </div>
                             </div>
-
-                        </div>
-                    </li>
-
-
-                </ul>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-10.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content shadow-1" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-11.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-12.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        {% endfor %}
-    </div>
-
-    <div class="section-bg-image white" style="background-image:url({% static 'images/hd-portrait.jpg'%})">
-        <div class="container content">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="title-base text-left">
-                        <hr/>
-                        <h2>Новый хавчик</h2>
-                        <p>Что-то написать интересное</p>
-                    </div>
-                </div>
-
-            </div>
-            <hr class="space l"/>
-            <div class="flexslider carousel outer-navs"
-                 data-options="minWidth:200,itemMargin:15,numItems:4,controlNav:false,directionNav:true">
-                <ul class="slides">
-                    <li>
-                        <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                            <i class="fa fa-camera-retro anima"></i>
-                            <a href="#" class="img-box lightbox anima-scale-up anima">
-
-                                <img src="{% static 'images/gallery/long-13.jpg'%}" alt=""/>
-                            </a>
-                            <div class="caption">
-                                <h2>Название блюда</h2>
-                                <span class="extra-content">111 сом</span>
-                                <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
-                            </div>
-
+        <div class="section-bg-image white" style="background-image:url({% static 'images/hd-portrait.jpg'%})">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="title-base text-left">
+                            <hr />
+                            <h2>Новый хавчик</h2>
+                            <p>Что-то написать интересное</p>
                         </div>
-                    </li>
+                    </div>
 
-
-                </ul>
-            </div>
+                </div>
+                <hr class="space l" />
+                <div class="flexslider carousel outer-navs" data-options="minWidth:200,itemMargin:15,numItems:4,controlNav:false,directionNav:true">
+                    <ul class="slides">
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-13.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-14.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-15.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-16.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
+                                <i class="fa fa-camera-retro anima"></i>
+                                <a href="#" class="img-box lightbox anima-scale-up anima">
+                                    <img src="{% static 'images/gallery/long-17.jpg'%}" alt="" />
+                                </a>
+                                <div class="caption">
+                                    <h2>Название блюда</h2>
+                                    <span class="extra-content">111 сом.</span>
+                                    <p>Еда, хавчик, фрукты, овощи, соль, перец, ложка, ножка, рокнролл.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             <hr class="space"/>
             <div class="title-base">
                 <hr/>

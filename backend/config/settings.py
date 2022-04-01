@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mav8hpnx0q8vq6%&&@1!ez)li75@+t45samq-i*%2@d*6%mf(&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -83,10 +83,15 @@ WSGI_APPLICATION = 'backend.config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv("POSTGRES_DB",default='bachchai_db'),
+        'USER' : os.getenv("POSTGRES_USER",default='bach_user'),
+        'PASSWORD' : os.getenv("POSTGRES_PASSWORD",default='bachchai2022'),
+        'HOST' : os.getenv("POSTGRES_HOST",default='127.0.0.1'),
+        'PORT' : os.getenv("POSTGRES_PORT", default='5432'),
     }
 }
+
 
 
 # Password validation

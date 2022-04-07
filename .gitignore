@@ -15,7 +15,7 @@ env/
 /media/news
 /media/users
 /media/*
-
+media/
 .DS_Store
 
 # If you are using PyCharm #

@@ -50,7 +50,6 @@
                                 <i class="fa fa-shopping-cart"><span class="cart-count">1</span></i>
                                 <div class="shop-menu">
                                     <ul class="shop-cart">
-                                        {% for item in cart %}
                                         <li class="cart-item">
                                             <img src="{{product.image.url}}" alt="">
                                             <div class="cart-content">
@@ -60,10 +59,9 @@
                                                     </span>
                                             </div>
                                         </li>
-                                        {% endfor %}
                                     </ul>
                                     <p class="cart-total">
-                                        Итого: <span>{{cart.total_price}}</span>
+                                        Итого: <span></span>
                                     </p>
                                     <p class="cart-buttons">
                                         <a href="{% url 'cart_page' %}" class="btn btn-xs cart-view">Просмотреть корзину</a>

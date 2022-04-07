@@ -1,11 +1,10 @@
-﻿{% extends  'base.html'%}
+﻿{% extends  'base.html' %}
 {% load static %}
 
 {% block content %}
-<div class="main-container container">
+<div style="margin-top:5rem;" class="main-container container">
     <ul class="breadcrumb">
-        <li><a href="#"><i class="fa fa-home"></i></a></li>
-        <li><a href="{% url 'products' %}"> Вернутся в меню </a></li>
+        <li><a style="font-size:17px" href="{% url 'products' %}"><span><i class="fas fa-arrow-left"></i> </span>Вернутся в меню </a></li>
     </ul>
 
     <div class="row">
@@ -33,7 +32,7 @@
                                                                             title="Xitefun Causal Wear Fancy Shoes"
                                                                             class="img-thumbnail"/></a></td>
                         <td class="text-left">
-                            <a href="{% url 'product_detail' product.pk %}">
+                            <a href="">
                                 {{ product.name }}
                             </a>
                         </td>

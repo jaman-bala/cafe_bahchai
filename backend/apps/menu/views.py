@@ -1,23 +1,21 @@
-from django.shortcuts import render
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.views.generic import TemplateView, ListView, DetailView
-from django.shortcuts import get_object_or_404
-from django.views.generic.edit import FormMixin
-# Create your views here.
-
 from .models import Category, Product
+from backend.apps.cart.cart import Cart
 
 
-class IndexView(ListView):
+class IndexView(ListView, TemplateView):
     model = Product
     template_name = "index.html"
     context_object_name = "products"
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
+        cart = Cart(self.request)
+
         context['categories'] = Category.objects.all()
+        context['cart'] = cart
         return context
+
 
 
 class AboutView(TemplateView):

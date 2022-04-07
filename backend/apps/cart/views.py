@@ -1,21 +1,15 @@
-from django.shortcuts import render
-from django.shortcuts import render, redirect
-from django.views import View
-# Create your views here.
+from django.shortcuts import redirect
 from .cart import Cart
 from backend.apps.menu.models import Product
-from django.http import HttpResponseRedirect
-from django.shortcuts import reverse
 from django.views.generic import TemplateView
 from .forms import CartAddProductForm
-from django.views.generic.edit import FormMixin
 
 
 def add_cart(request, product_id):
     cart = Cart(request)
     product = Product.objects.get(id=product_id)
     cart.add(product=product, quantity=1, )
-    return redirect("cart_page")
+    return redirect("products")
 
 
 def add_cart_from_form(request, product_id):

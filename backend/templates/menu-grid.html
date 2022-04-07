@@ -37,11 +37,11 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">О нас <span
                                         class="caret"></span></a>
                                 <ul class="dropdown-menu multi-level">
-                                     <li><a href="{% url 'list' %}">Доставка</a></li>
-                                                <li><a href="reservation-2.html">Бронь и время работы</a></li>
-                                                <li><a href="{% url 'about' %}">Важное и отзывы</a></li>
-                                                <li><a href="{% url 'map' %}">Как нас найти?</a></li>
-                                                <li><a href="faq.html">Вопросы и ответы</a></li>
+                                    <li><a href="{% url 'list' %}">Доставка</a></li>
+                                    <li><a href="reservation-2.html">Бронь и время работы</a></li>
+                                    <li><a href="{% url 'about' %}">Важное и отзывы</a></li>
+                                    <li><a href="{% url 'map' %}">Как нас найти?</a></li>
+                                    <li><a href="faq.html">Вопросы и ответы</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -50,8 +50,9 @@
                                 <i class="fa fa-shopping-cart"><span class="cart-count">1</span></i>
                                 <div class="shop-menu">
                                     <ul class="shop-cart">
+                                        {% for item in cart %}
                                         <li class="cart-item">
-                                            <img src="{% static 'images/gallery/pizza-1.jpg'%}" alt="">
+                                            <img src="{{product.image.url}}" alt="">
                                             <div class="cart-content">
                                                 <h5></h5>
                                                 <span class="cart-quantity">
@@ -59,9 +60,10 @@
                                                     </span>
                                             </div>
                                         </li>
+                                        {% endfor %}
                                     </ul>
                                     <p class="cart-total">
-                                        Итого: <span>299.00 Сом</span>
+                                        Итого: <span>{{cart.total_price}}</span>
                                     </p>
                                     <p class="cart-buttons">
                                         <a href="{% url 'cart_page' %}" class="btn btn-xs cart-view">Просмотреть корзину</a>
@@ -116,7 +118,7 @@
                 </div>
 
                 <div class="col-md-9">
-                     {% for category in categories %}
+                    {% for category in categories %}
                     <h3 id="{{category.id}}" class="text-black">{{category.name}}</h3>
                     <div class="maso-list list-sm-6 col-margins">
                         <div class="navbar navbar-inner">
@@ -134,24 +136,26 @@
                         </div>
                         <div class="maso-box row" data-lightbox-anima="fade-top">
                             {% for product in products_grid %}
-                                {% if product.category.name == category.name %}
-                                <div data-sort="1" class="maso-item col-md-6 cat2">
-                                    <div class="img-box adv-img adv-img-full-content">
-                                        <div class="img-box">
-                                            <img src="{{product.image.url}}" alt="">
-                                        </div>
-                                        <a href="#" class="caption-bg img-box">
-                                            <div class="caption">
-                                                <div class="inner">
-                                                    <h2>{{product.name}}</h2>
-                                                    <p class="sub"> {{product.description}} </p>
-                                                    <p class="sub"> {{product.price}} </p>
-                                                </div>
-                                            </div>
-                                        </a>
+                            {% if product.category.name == category.name %}
+                            <div data-sort="1" class="maso-item col-md-6 cat2">
+                                <div class="img-box adv-img adv-img-full-content">
+                                    <div class="img-box">
+                                        <img src="{{product.image.url}}" alt="">
                                     </div>
+                                        <div class="caption">
+                                            <div class="inner">
+                                                <h2>{{product.name}}</h2>
+                                                <p class="sub"> {{product.description}} </p>
+                                                <p class="sub"> {{product.price}} </p>
+                                                <a class="sub" style="" href="{% url 'add_cart' product.id %}"><i class="fas fa-cart-plus"></i></a>
+
+
+                                            </div>
+                                        </div>
+
                                 </div>
-                                {% endif %}
+                            </div>
+                            {% endif %}
                             {% endfor %}
                             <div class="clear"></div>
                         </div>

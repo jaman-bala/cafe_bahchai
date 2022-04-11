@@ -24,8 +24,7 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="dropdown active">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'index_list' %}">Главная
-                                    <span class="caret"></span></a>
+                                <li><a href="{% url 'index_list' %}">Главная</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'products' %}">Наше меню
                                     <span class="caret"></span></a>
@@ -92,7 +91,7 @@
                                         </li>
                                     </ul>
                                     <p class="cart-total">
-                                        Итого: <span>299.00 Сом</span>
+                                        Итого: <span></span>
                                     </p>
                                     <p class="cart-buttons">
                                         <a href="{% url 'cart_page' %}" class="btn btn-xs cart-view">Просмотреть корзину</a>

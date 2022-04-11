@@ -4,6 +4,7 @@
 {% block content %}
 <body>
 <div id="preloader"></div>
+<div class="phone-call"><a href="https://wa.me/996502121121"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" width="50" alt="Позвонить!" title="Позвонить!"></a></div>
 <div class="footer-parallax-container">
     <header class="fixed-top bg-transparent menu-transparent scroll-change wide-area dark-design"
             data-menu-anima="fade-in">
@@ -69,8 +70,6 @@
                                         class="caret"></span></a>
                                 <ul class="dropdown-menu multi-level">
                                     <li><a href="{% url 'list' %}">Доставка</a></li>
-                                    
-                                    
                                     <li><a href="{% url 'map' %}">Как нас найти?</a></li>
                                    
                                 </ul>
@@ -124,17 +123,7 @@
                 Шашлычная и Ресто
             </p>
             <hr class="space"/>
-            
-        <div class="section-bg-image white" style="background-image:url({% static 'images/hd-portrait.jpg'%})">
-            <div class="container content">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="title-base text-left">
-                            <hr />
-                            <h2>Новые блюда</h2>
-                            <p>Что-то написать интересное</p>
-                        </div>
-                    </div>
+            <hr class="space l" />
                     
                     <div class="row">
                         <div class="col-md-4">
@@ -172,236 +161,342 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <hr class="space l" />
-                <div class="flexslider carousel outer-navs" data-options="minWidth:200,itemMargin:15,numItems:4,controlNav:false,directionNav:true">
-                    <ul class="slides">
-                        <li>
-                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                                <i class="fa fa-camera-retro anima"></i>
-                                <a href="#" class="img-box lightbox anima-scale-up anima">
-                                    <img src="{% static 'images/gallery/long-13.jpg'%}" alt="" />
-                                </a>
-                                <div class="caption">
-                                    <h2>Название блюда</h2>
-                                    <span class="extra-content">111 сом</span>
-                                    <p>Описание</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                                <i class="fa fa-camera-retro anima"></i>
-                                <a href="#" class="img-box lightbox anima-scale-up anima">
-                                    <img src="{% static 'images/gallery/long-14.jpg'%}" alt="" />
-                                </a>
-                                <div class="caption">
-                                    <h2>Название блюда</h2>
-                                    <span class="extra-content">111 сом.</span>
-                                    <p>Описание</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                                <i class="fa fa-camera-retro anima"></i>
-                                <a href="#" class="img-box lightbox anima-scale-up anima">
-                                    <img src="{% static 'images/gallery/long-15.jpg'%}" alt="" />
-                                </a>
-                                <div class="caption">
-                                    <h2>Название блюда</h2>
-                                    <span class="extra-content">111 сом.</span>
-                                    <p>Описание</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                                <i class="fa fa-camera-retro anima"></i>
-                                <a href="#" class="img-box lightbox anima-scale-up anima">
-                                    <img src="{% static 'images/gallery/long-16.jpg'%}" alt="" />
-                                </a>
-                                <div class="caption">
-                                    <h2>Название блюда</h2>
-                                    <span class="extra-content">111 сом.</span>
-                                    <p>Описание</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img-box adv-img adv-img-half-content" data-anima="fade-left" data-trigger="hover">
-                                <i class="fa fa-camera-retro anima"></i>
-                                <a href="#" class="img-box lightbox anima-scale-up anima">
-                                    <img src="{% static 'images/gallery/long-17.jpg'%}" alt="" />
-                                </a>
-                                <div class="caption">
-                                    <h2>Название блюда</h2>
-                                    <span class="extra-content">111 сом.</span>
-                                    <p>Описание</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            <hr class="space"/>
-            <div class="title-base">
-                <hr/>
-                <h2>Посмотрите на наше меню</h2>
-                <p>Шеф готовил для вас блюдо, смотрите меню</p>
-            </div>
-            <div class="text-center"><a data-anima="pulse" href="{% url 'products' %}"
-                                        class="circle-button btn btn-sm opacity-1">Полное меню</a></div>
-            <hr class="space"/>
-
-            <div class="section-slider row-14 shadow-2 side-paddings">
-                <div class="flexslider advanced-slider slider white" data-options="animation:fade,directionNav:false">
-                    <ul class="slides">
-                        <li data-slider-anima="fade-left">
-                            <div class="section-slide">
-                                <div class="bg-cover" style="background-image:url({% static 'images/cola-bg.jpg'%})">
-                                </div>
-                                <div class="container">
-                                    <div class="container-middle">
-                                        <div class="container-inner white">
-                                            <div class="row vertical-row">
-                                                <div class="col-md-6 anima">
-                                                    <p class="text-italic">Попробуйте наши холодные напитки</p>
-                                                    <h2 class="text-black text-l text-uppercase">Холодные напитки</h2>
-                                                    <p class="text-s">
-                                                        Описание
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-6 text-right text-center-sm">
-                                                    <button class="btn btn-sm btn-border anima anima-fade-right"
-                                                            type="button">Посмотреть
-                                                    </button>
-                                                </div>
+                
+                
+                <div class="section-bg-color" style="background-image:url(../images/hd-2.jpg)">
+                    <div class="container content">
+                        <div class="flexslider carousel outer-navs white" data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:true,directionNav:true">
+                            <ul class="slides">
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-1.jpg" alt="" />
+                                                </a>
                                             </div>
-                                            <hr class="space m visible-sm"/>
+                                            <div class="col-md-8">
+                                                <h2><a>Завтраки</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                    <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Завтраки">Прочитать больше</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-slider-anima="fade-left">
-                            <div class="section-slide">
-                                <div class="bg-cover" style="background-image:url({% static 'images/cola-bg-2.jpg'%})">
-                                </div>
-                                <div class="container">
-                                    <div class="container-middle">
-                                        <div class="container-inner white">
-                                            <div class="row vertical-row">
-                                                <div class="col-md-6 anima">
-                                                    <p class="text-italic">Попробуйте наши горячие напитки</p>
-                                                    <h2 class="text-black text-l text-uppercase">Горячие напитки</h2>
-                                                    <p class="text-s">
-                                                        Описание
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-6 text-right">
-                                                    <button class="btn btn-sm btn-border anima anima-fade-right"
-                                                            type="button">Посмотреть
-                                                    </button>
-                                                </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
                                             </div>
-                                            <hr class="space m visible-sm"/>
+                                            <div class="col-md-8">
+                                                <h2><a>Закуски</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                    <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Закуски">Прочитать больше</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-3.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Салаты</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                    <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Салаты">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Первое блюдо</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                    <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Первое-блюдо">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Второе блюдо</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Второе-блюдо">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Шашлыки</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                  <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Шашлыки">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Стейки</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                   <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Стейки">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Пицца</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                   <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Пицца">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Блюда на заказ</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                 <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Блюда-на-заказ">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Гарниры</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                   <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Гарниры">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Соусы</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                 <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Соусы">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Пиво на разлив</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                   <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Пиво-на-разлив">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Прохладные напитки</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                  <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Прохладные-напитки">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate" data-trigger="hover">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <a class="img-box">
+                                                    <img class="anima" src="../images/gallery/post-2.jpg" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h2><a>Алкогольные напитки</a></h2>
+                                                <hr>
+                                                <div class="tag-row icon-row">
+                                                  <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
+                                                </div>
+                                                <p>
+                                                    Lorem ipsum dolor sitamet consectetur adipisicing elited do eiusmod tempor incididunt
+                                                    ut labore et dolore magna aliqua. Utenim ad minim veniam.
+                                                </p>
+                                                <a class="btn-text" href="{% url 'products' %}#Алкогольные-напитки">Прочитать больше</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+           
         </div>
     </div>
-
-    <div class="section-bg-color" style="background-image:url({% static 'images/hd-2.jpg'%})">
-        <div class="container content">
-            <div class="flexslider carousel outer-navs white"
-                 data-options="minWidth:200,itemMargin:15,numItems:2,controlNav:true,directionNav:true">
-                <ul class="slides">
-                    <li>
-                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
-                             data-trigger="hover">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="img-box">
-                                        <img class="anima" src="{% static 'images/gallery/post-1.jpg'%}" alt=""/>
-                                    </a>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a>Блюдо</a></h2>
-                                    <hr>
-                                    <div class="tag-row icon-row">
-                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
-                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
-                                        <span><i class="fa fa-pencil"></i>Админ</span>
-                                    </div>
-                                    <p>
-                                        Описание
-                                    </p>
-                                    <a class="btn-text" href="#">Прочитать больше</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
-                             data-trigger="hover">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="img-box">
-                                        <img class="anima" src="{% static 'images/gallery/post-2.jpg'%}" alt=""/>
-                                    </a>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a>Блюдо</a></h2>
-                                    <hr>
-                                    <div class="tag-row icon-row">
-                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
-                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
-                                        <span><i class="fa fa-pencil"></i>Админ</span>
-                                    </div>
-                                    <p>
-                                        Описание
-                                    </p>
-                                    <a class="btn-text" href="#">Прочитать больше</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="advs-box advs-box-side-img advs-box-blog" data-anima="scale-rotate"
-                             data-trigger="hover">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="img-box">
-                                        <img class="anima" src="{% static 'images/gallery/post-3.jpg'%}" alt=""/>
-                                    </a>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a>Блюдо</a></h2>
-                                    <hr>
-                                    <div class="tag-row icon-row">
-                                        <span><i class="fa fa-calendar"></i>33.33.2022</span>
-                                        <span><i class="fa fa-bookmark"></i><a href="#">Категория</a></span>
-                                        <span><i class="fa fa-pencil"></i>Админ</span>
-                                    </div>
-                                    <p>
-                                       Описание
-                                    </p>
-                                    <a class="btn-text" href="#">Прочитать больше</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

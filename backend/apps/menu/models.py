@@ -15,7 +15,6 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
-    # subcategory = models.ForeignKey(SubCategory, on_delete=models.PROTECT)
     name = models.CharField(verbose_name="Название блюда", max_length=200)
     description = models.TextField(verbose_name="Описание")
     price = models.DecimalField(verbose_name="Цена", max_digits=10, decimal_places=2)

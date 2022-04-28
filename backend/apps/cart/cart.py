@@ -50,7 +50,7 @@ class Cart(object):
 
     def get_total_price(self):
         total_price = [Decimal(item['price']) * item['quantity'] for item in self.cart.values()]
-        # [129, 2500, 3500,4500]
+
         return sum(total_price)
 
     def clear(self):
